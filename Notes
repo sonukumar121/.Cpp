@@ -1,1 +1,22 @@
+Class -->bluprint of the car
+Objects-->how many cars.
+class -->under -->properties attributes
+members functions.for exa->changedepartment()
+pubic->data & memebers accisble to everyone.(by default private).
+private->data & methods accisble inside class.
+protected-> data & methods accisble inside class & to its derived class.
+1>Encapsulations
+2>Abstactions
+3>Inheritence
+4>Polymorphism
+
+Encapsulation-->Encapsulation is wrapping up of data & memebers fn in a single unit called class.
+
+*Constructor-->Special method involved automatically at time of object creation.Used for Initilisation.
+*Same name as Class
+*Constructor doesnt have return type
+*Only called once automatically at object creation
+*Memory allocation happens when constructor is called.
+
+Non
 
