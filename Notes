@@ -18,5 +18,63 @@ Encapsulation-->Encapsulation is wrapping up of data & memebers fn in a single u
 *Only called once automatically at object creation
 *Memory allocation happens when constructor is called.
 
-Non
+#include<iostream>
+#include<conio.h>
+#include<string>
+using namespace std;
+ class student
+{
+    public:
+    
+    string name;
+    int roll_no,c;
+    string section; 
+    string n;
+
+
+student()
+{
+
+}
+    void inform()
+    {
+      cout<<"Enter your Name";
+      cin>> name;
+      cout<<"Enter your roll.no";
+      cin>>roll_no;
+
+    }
+
+    void display()
+    {
+      cout<<"Name= "<<name<<"Roll.no= "<<roll_no<<endl;  
+    }
+
+    void add(int a,int b)
+    {
+      c=a+b;
+      cout<<"Sum of two numbers is:"<<c;
+    }
+    
+
+    student(student &obj)//constructor copy-->call by refernce.fn define
+    {
+      this->name=obj.name;
+      this->roll_no=obj.roll_no;
+
+    }
+};
+int main()
+{
+  int x,y;
+     student obj;
+     obj.inform();
+     obj.display();
+     cout<<"Enter the two numbers";
+     cin>>x>>y;
+     obj.add(x,y);
+     student obj2(obj);//fn calling
+    return 0;
+}
+
 
