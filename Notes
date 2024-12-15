@@ -5,76 +5,124 @@ members functions.for exa->changedepartment()
 pubic->data & memebers accisble to everyone.(by default private).
 private->data & methods accisble inside class.
 protected-> data & methods accisble inside class & to its derived class.
-1>Encapsulations
-2>Abstactions
-3>Inheritence
-4>Polymorphism
+a>Encapsulations
+b>Abstactions
+c>Inheritence
+d>Polymorphism
+*>Encapsulation-->Encapsulation is wrapping up of data & memebers fn in a single unit called class.
 
-Encapsulation-->Encapsulation is wrapping up of data & memebers fn in a single unit called class.
 
-*Constructor-->Special method involved automatically at time of object creation.Used for Initilisation.
+
+                                 :STARTING MAIN TOPICS DEFINE WITH CODES:
+1>*CONSTRUCTOR-->Special method involved automatically at time of object creation.Used for Initilisation.
 *Same name as Class
 *Constructor doesnt have return type
 *Only called once automatically at object creation
 *Memory allocation happens when constructor is called.
 
-#include<iostream>
-#include<conio.h>
-#include<string>
+a>default constructor
+b>parametrized constructor
+c>copy constructor
+
+/*#include <iostream>
 using namespace std;
- class student
-{
-    public:
-    
-    string name;
-    int roll_no,c;
-    string section; 
-    string n;
+//constructor
+class s
+{ 
+public:
+  int a,b;
+   s() // default constructor
+   {
+     cout<<"hi I am default constructor";
+   }
 
-
-student()
-{
-
-}
-    void inform()
-    {
-      cout<<"Enter your Name";
-      cin>> name;
-      cout<<"Enter your roll.no";
-      cin>>roll_no;
-
-    }
-
-    void display()
-    {
-      cout<<"Name= "<<name<<"Roll.no= "<<roll_no<<endl;  
-    }
-
-    void add(int a,int b)
-    {
-      c=a+b;
-      cout<<"Sum of two numbers is:"<<c;
-    }
-    
-
-    student(student &obj)//constructor copy-->call by refernce.fn define
-    {
-      this->name=obj.name;
-      this->roll_no=obj.roll_no;
-
-    }
 };
+
 int main()
 {
-  int x,y;
-     student obj;
-     obj.inform();
-     obj.display();
-     cout<<"Enter the two numbers";
-     cin>>x>>y;
-     obj.add(x,y);
-     student obj2(obj);//fn calling
-    return 0;
+  s obj;
+
+}*/
+
+/*#include <iostream>
+using namespace std;
+//constructor
+class number
+{ 
+public:
+  int a,b;
+   number(int a,int b) // peramatrized constructor
+   {
+     cout<<"hi I am parametrized contructot your sum is:"<<a+b;
+   }
+
+};
+
+int main()
+{
+  number obj(20,30);
+}*/
+
+
+/*#include <iostream>
+using namespace std;
+//constructor
+class number
+{ 
+public:
+int x,y;
+  int a,b;
+   number(int a,int b) // copy constructor
+   {
+       x=a;
+       y=b;
+     cout<<x<<ends<<y<<endl;
+   }
+
+   number(number &ref)//ref use for copy
+   {
+      x=ref.x;
+      y=ref.y;
+      cout<<x<<ends<<y;
+
+   }
+
+};
+
+int main()
+{
+  number obj(20,30); // number obj=number();-->backend
+  number obj2=obj; //obj2 is the obj of copy constructor.
+}
+*/
+
+
+
+
+
+6> DESTRUCTORS-->Use for seallcoate the memory which are created when compiler call the constructor.
+
+include <iostream>
+using namespace std;
+
+class student
+{
+       public:
+   student()
+   {
+       cout<<"constructor call"<<endl;
+   }
+
+   ~student()
+
+   {
+        cout<<"constructor deallocate";
+   }
+};
+
+int main()
+{
+       student obj;
 }
 
 
