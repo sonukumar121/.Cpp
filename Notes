@@ -197,3 +197,71 @@ int main()
 }
 
 
+
+
+
+
+
+/*//ENCAPSULATION-->Encalpsulation is the process of in which data memebers and members function wrap in a single unit or you can say in single class.
+data members 
+     +             ==> Encapsulations/Similar to Abstraction.
+members functions*/
+
+
+#include <iostream>
+using namespace std;
+class chor
+{
+  
+
+  private:
+  string email;
+  string password;
+
+
+  public:
+  string name;
+  string mob;
+  string adr;
+
+
+
+  void input()
+  {
+   name="sonu";
+   mob="8409096038";
+   adr="jalim koeri lane barikhanjarpur";
+  }
+
+
+
+  void output()
+  {
+    cout<<name<<endl;
+    cout<<mob<<endl;
+    cout<<adr<<endl;
+  }
+
+};
+
+
+
+class police:public chor
+{
+  
+};
+
+
+
+int main()
+{
+
+  police p;
+  p.input();
+  p.output();
+
+}
+
+
+
+
