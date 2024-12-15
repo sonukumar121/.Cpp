@@ -126,3 +126,74 @@ int main()
 }
 
 
+
+
+8>FRIEND FUNCTIONS
+*SYNTAX-->friend return_type function_name(class ref);
+                FRIEND FUNCTION
+/*#include <iostream>
+using namespace std;
+//constructor
+class sonu
+{
+   private:
+   string tv;
+
+   public:
+
+   void show()
+   {
+    tv="IPL FINAL 2024";
+   }
+
+
+friend void abhi(sonu r);
+
+};
+
+void abhi(sonu r)
+{
+ cout<<"hi i am abhi now i am watching tv"<<r.tv; 
+}
+
+int main()
+
+{
+  sonu a;
+  a.show();
+  abhi(a);
+}*/
+
+
+           FRIEND CLASS
+
+#include <iostream>
+using namespace std;
+
+class sonu
+{
+  int rup=100;
+  public:
+  friend class abhi;
+};
+
+
+class abhi
+
+{
+  public:
+  void check(sonu r)
+  {
+    cout<<"Thank you! sonu i recieved"<<r.rup;
+  }
+};
+
+int main()
+
+{
+  sonu s;
+  abhi a;
+  a.check(s);
+}
+
+
