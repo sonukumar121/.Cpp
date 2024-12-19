@@ -265,3 +265,111 @@ int main()
 
 
 
+
+
+
+
+//topic inheritance
+//inheritance
+#include <iostream>
+using namespace std;
+class dad
+{
+  protected:
+  int money;
+  
+  public:
+  void input()
+  {
+      money=50000;
+     
+  }
+  
+};
+
+class son : public dad
+{
+  int mysaving;
+  public:
+void show()
+
+{
+  mysaving=4000;
+  cout<<"dad money: "<<money<<endl;
+  cout<<"son saving"<<:mysaving;
+}
+
+};
+
+int main()
+{
+  son s;
+  s.input();
+  s.show();
+  
+return 0;
+}
+
+
+
+
+
+//multilevel-inhertiance
+
+#include <iostream>
+using namespace std;
+class dad
+{
+  protected:
+  int money;
+  public:
+  void input()
+  {
+     money=50000;
+  }
+};
+
+class son: public dad
+{
+  
+int saving;
+
+public:
+  void show()
+  {
+    saving=2000;
+    cout<<money<<endl;
+    cout<<saving;
+  }
+};
+
+class mom : public son
+{
+  protected:
+  int momsaving;
+
+  public:
+   void sh()
+   {
+     momsaving=4000; 
+     cout<<momsaving;
+   }
+};
+
+
+int main()
+
+{
+  mom s;
+  s.input();
+  s.show();
+  s.sh();
+  return 0;
+}
+
+
+
+//
+
+
+
