@@ -40,3 +40,71 @@ cout<<"the value at front index or back index is ::"<<num.front()<<endl<<num.bac
 
 
 
+
+
+
+
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+//initilisation of vectors:
+/*1>vector<int> vec;
+2>vector<int> vec={1,2};
+3>vector<int> vec(3,10);=(size of vector , value passing).
+4>vector<int> vec2(vec1);*/
+
+int main()
+{
+  //push
+  vector<int> num;
+ for(int i=1;i<=5;i++)
+ {
+  num.push_back(i);
+
+ }
+ for(int i:num)
+ {
+  cout<<i;
+ }
+ //pop
+num.pop_back();
+num.pop_back();
+ for(int i:num)
+ {
+  cout<<i;
+ }
+
+//capacity-->double 1,2,4,16...
+//at() or []
+
+cout<<"the value at index 1 is: "<<endl<<num.at(1)<<"or"<<num[1];
+//front or back()
+
+cout<<"the value at front index or back index is ::"<<num.front()<<endl<<num.back()<<endl;
+
+vector<int> v1={1,2,3,3};
+vector<int> v2(v1);
+for(int val:v2)
+{
+   cout<<"the value of v2 elements is:"<<val<<endl;
+}
+v2.erase(v2.begin());
+
+for(int val:v2)
+{
+   cout<<"the value of v2n elements is:"<<val<<endl;
+}
+
+//clear
+v2.clear();
+cout<<v2.size();
+//vector.begin()
+//vector.rbegin();
+cout<<"the value at begning"<<v2.begin()<<"the value at end:"<<v2.rbegin()";
+
+}
+
+
+
