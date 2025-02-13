@@ -1,11 +1,21 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+                          DECLERATIONS
 //initilisation of vectors:
 /*1>vector<int> vec;
 2>vector<int> vec={1,2};
 3>vector<int> vec(3,10);=(size of vector , value passing).
 4>vector<int> vec2(vec1);*/
+*SIZE AND CAPACITY(WORK ON GP)
+*PUSH_BACK() AND POP_BACK()
+*AT() OR []
+*FRONT AND BACK
+*VECTOR ITERATORS-->1>VEC.BEGIN. AND VEC.END (JUST LIKE ARRAY).....
+
+
+
+                       IMPLEMENATATIONS
 
 int main()
 {
@@ -78,6 +88,13 @@ num.pop_back();
 
 //capacity-->double 1,2,4,16...
 //at() or []
+
+
+
+
+
+
+VECTOR ITERATORS:-->
 
 cout<<"the value at index 1 is: "<<endl<<num.at(1)<<"or"<<num[1];
 //front or back()
