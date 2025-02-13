@@ -54,4 +54,117 @@ int main()
 } 
 
 
+
+
+
+
+
+
+
+#include<iostream>
+#include<vector>
+#include<list>
+#include<deque>
+#include<stack>
+using namespace std;
+
+//list,deque,pair,emplace_back().
+int main()
+{
+    /*
+    //Doubly link list(list)
+   list<int> l;
+   l.push_back(3);
+   l.push_back(10);
+   l.push_front(11);
+   l.push_front(30);
+   for(int val:l)
+   {
+    cout<<val<<" ";
+
+    deque<int> d={1,2,3,4,5};
+    {
+       for(int val:d)
+       {
+         cout<<val;
+       } 
+       
+       cout<<d[2];
+    }
+
+
+    //pair -->same as look like structure.
+
+    //1st way:-
+    pair<int,char> p={2,'a'};
+    cout<<p.first;
+    cout<<p.second;
+
+
+    //2nd way:-
+    pair<int,pair<int,char>> p={1,{5,'a'}};
+    cout<<p.first;
+    cout<<p.second.first;
+
+    vector<pair<int,int>> vec={{5,3},{2,1},{6,7}};
+    for(pair<int,int> p: vec)
+    {
+       cout<<p.first<<" "<<p.second<<endl;
+    }
+
+    vector<pair<int,int>> vec={{5,3},{2,1},{6,7}};
+    vec.push_back({1,2});
+    vec.emplace_back(2,3);
+
+    for(auto p: vec)
+    {
+       cout<<p.first<<" "<<p.second<<endl;
+}
+    
+ 
+  
+    
+    //stacks ==> //pop(),top(),push(),empty(),swap();
+   
+
+    stack<int> s;
+     s.push(1);
+     s.push(2);//3,2,1
+     s.push(3);
+     while(!s.empty())
+     {
+        cout<<s.top();
+        s.pop();
+     }
+
+
+     stack<int> s;
+     if(s.empty()==true)
+
+    {
+        cout<<"yes";
+    }
+else
+{
+    cout<<"no";
+}
+ */
+
+ stack<int> s;
+     s.push(1);
+     s.push(2);//3,2,1
+     s.push(3);
+ stack<int> s2;
+ s2.swap(s);
+ cout<<"the size of s: "<<s.size()<<endl<<"the size of s2:"<<s2.size()<<endl;
+
+}
+
+
+
+
+  
+
+
+
       
