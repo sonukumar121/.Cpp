@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+*-->DEFERENCE OPERATORS.
                           DECLERATIONS
 //initilisation of vectors:
 /*1>vector<int> vec;
@@ -10,10 +11,44 @@ using namespace std;
 *SIZE AND CAPACITY(WORK ON GP)
 *PUSH_BACK() AND POP_BACK()
 *AT() OR []
-*FRONT AND BACK
-*CLEAR AND EMPTY
-*VECTOR ITERATORS-->1>VEC.BEGIN. AND VEC.END (JUST LIKE ARRAY).....
+*FRONT() AND BACK()
+*CLEAR() AND EMPTY()
+*INSERT(POSITION,VALUE)//(VEC.BEGIN+2,VALUE).
+*VECTOR ITERATORS-->1>VEC.BEGIN(). AND VEC.END() //(JUST LIKE ARRAY).....VEC.END POINTS TO N+! ARRAY INDEX.
 
+*VECTOR.begin()-->(forward iterators)...
+SYNTAX-
+
+vector<int>::iterator it;
+for(it=vec.begin(); it!=vec.end(); it++)
+{
+   cout<<*(it) <<endl;
+}
+
+
+*VECTOR.rbegin() -->(reverse/backward iterators)//iterators of vectors..
+SYNATX-
+
+for(auto it=vec.rbegin();it!=vec.rend();it++)
+{
+cout<<*(it)<<endl;
+
+// auto-->rbegin or begin both valid.or forward backward.
+//both the index at (n-1) for reverse end and index (n+1) for forward end .
+
+
+#include<iostream>
+#include<vector>
+using namespace std;
+int main()
+{
+   vector<int>vec={1,2,3,4,5};
+   for(auto it=vec.begin();it!=vec.end();it++)
+
+   {
+    cout<< *(it);
+   }
+} 
 
 
       
