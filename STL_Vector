@@ -12,7 +12,7 @@ using namespace std;
       //size,erase,clear,begin,end,rbegin,rend,insert,front,back;
 
 *SIZE AND CAPACITY(WORK ON GP)
-*PUSH_BACK() AND POP_BACK()
+*PUSH_BACK()/FRONT AND POP_BACK()/FRONT
 *AT() OR []
 *FRONT() AND BACK()
 *CLEAR() AND EMPTY()
