@@ -8,6 +8,9 @@ using namespace std;
 2>vector<int> vec={1,2};
 3>vector<int> vec(3,10);=(size of vector , value passing).
 4>vector<int> vec2(vec1);*/
+
+      //size,erase,clear,begin,end,rbegin,rend,insert,front,back;
+
 *SIZE AND CAPACITY(WORK ON GP)
 *PUSH_BACK() AND POP_BACK()
 *AT() OR []
