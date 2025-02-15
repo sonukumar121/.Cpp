@@ -201,5 +201,29 @@ else
 
 
 
+            //EXAMPLES OF MOST USING ALGOTIGHM STL
 
+
+#include<iostream>
+#include<vector>
+#include<map>
+#include<algorithm>
+
+using namespace std;
+int main()
+{
+  //sorting
+  //int arr[5]={1,2,3,4,5};
+  vector<int> arr={1,0,4,8,2};
+  //sort(arr.begin(),arr.end());-->increasing
+  //sort(arr.begin(),arr.end(),greater<int>());-->decreasing
+  //reverse(arr.begin(),arr.end());
+  
+ // reverse(arr,arr+5);
+  
+ //cout<<*(max_element(arr.begin(),arr.end()));
+ cout<<binary_search(arr.begin(),arr.end(),4);
+
+
+}
       
