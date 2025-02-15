@@ -124,26 +124,6 @@ int main()
  
   
     
-    //stacks ==> pop(),top(),push(),empty(),swap();
-    //queue==>   pop(),top(),push(),empty(),swap();
-    //Max,Min,Binary searching,swap,sorting,nextpermuatation, Reverse.
-
-    //1> (Sorting)
-         *sort(arr,arr+n) // arr act like a pointer so passing the position (start,end)=(arr,arr+5).
-         *sort(vec.begin(),vec.end());
-         *sort(arr,arr+n,greater<int>())
-
-    //2>(Reverse)
-         reverse(v.begin(),v.end())
-
-    //3(Next permutation)
-       next_permutation(v.begin(),v.end())
-
-    //4((Max and Min elements)
-       *max_element(v.begin(),v.end());
-       *min_element(v.begin(),v.end());
-
-     //5>binary_search(v.begin(),v.end(),target)
 
       
        
@@ -190,6 +170,28 @@ else
 
 
 
+
+
+    //stacks ==> pop(),top(),push(),empty(),swap();
+    //queue==>   pop(),top(),push(),empty(),swap();
+    //Max,Min,Binary searching,swap,sorting,nextpermuatation, Reverse.
+
+    //1> (Sorting)
+         *sort(arr,arr+n) // arr act like a pointer so passing the position (start,end)=(arr,arr+5).
+         *sort(vec.begin(),vec.end());
+         *sort(arr,arr+n,greater<int>())
+
+    //2>(Reverse)
+         reverse(v.begin(),v.end())
+
+    //3(Next permutation)
+       next_permutation(v.begin(),v.end())
+
+    //4((Max and Min elements)
+       *max_element(v.begin(),v.end());
+       *min_element(v.begin(),v.end());
+
+     //5>binary_search(v.begin(),v.end(),target)
   
 
 
