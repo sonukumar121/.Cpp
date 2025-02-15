@@ -192,7 +192,13 @@ else
        *min_element(v.begin(),v.end());
 
      //5>binary_search(v.begin(),v.end(),target)
-  
+
+
+     //6> multi map
+          map<string , int > m;
+          m[key]=value; //key product .
+          //insert,emplace,erase,find,size,empty
+
 
 
 
