@@ -224,6 +224,6 @@ int main()
  //cout<<*(max_element(arr.begin(),arr.end()));
  cout<<binary_search(arr.begin(),arr.end(),4);
 
-
+//it is always mandatory for you if u use for(type var:vector) 
 }
       
