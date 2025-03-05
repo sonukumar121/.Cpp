@@ -226,4 +226,17 @@ int main()
 
 //it is always mandatory for you if u use for(type var:vector) 
 }
-      
+
+
+
+
+
+int main() {
+    // Create a vector with some elements
+    std::vector<int> vec = {1, 2, 3, 4, 5, 6, 7};
+
+    // Define start and end indices for clearing
+    int start = 2, end = 4;  // For example, clear elements from index 2 to 4
+
+    // Erase elements from index `start` to `end` (inclusive)
+    vec.erase(vec.begin() + start, vec.begin() + end + 1);
