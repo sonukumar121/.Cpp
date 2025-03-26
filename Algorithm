@@ -129,6 +129,16 @@ unique(): Removes consecutive duplicates and then prints the unique elements.
 
 
 
+Lambda Function:
+
+The syntax for a lambda is: [](parameters) { body }
+
+The [] is where you specify captured variables (which are variables from the outer scope that the lambda can access). We will discuss that in more detail below.
+
+The parameters (e.g., int& num) specify the input to the lambda.
+
+The body of the lambda defines what happens with those parameters (for instance, modifying them or printing them).
+
 
 
 
