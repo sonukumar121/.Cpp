@@ -35,3 +35,208 @@ Summary:
 list: A doubly linked list suited for frequent insertions and deletions, especially where you don't need fast random access.
 
 deque: A double-ended queue that allows fast access to both ends and efficient insertions/removals, making it ideal when you need quick access and modifications to both ends.
+
+
+
+
+//LIST
+
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+int main() {
+    // Initialize a list of integers
+    list<int> lst;
+
+    // Border way operations on list
+    cout << "Pushing elements to front and back:" << endl;
+    lst.push_back(10);    // push 10 at the back
+    lst.push_back(20);    // push 20 at the back
+    lst.push_front(5);    // push 5 at the front
+    lst.push_front(1);    // push 1 at the front
+    cout << "List after push operations: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    // Accessing the front and back elements
+    cout << "Front element: " << lst.front() << endl; // Should be 1
+    cout << "Back element: " << lst.back() << endl;   // Should be 20
+
+    // Pop elements from front and back
+    lst.pop_front();  // removes 1 from the front
+    lst.pop_back();   // removes 20 from the back
+    cout << "List after pop operations: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    // Size of the list
+    cout << "List size: " << lst.size() << endl;
+
+    // Check if list is empty
+    if (lst.empty()) {
+        cout << "List is empty!" << endl;
+    } else {
+        cout << "List is not empty!" << endl;
+    }
+
+    // Insert an element at a specific position
+    auto it = lst.begin();
+    advance(it, 1); // Move iterator to the second position
+    lst.insert(it, 15); // Insert 15 at the second position
+    cout << "List after insert: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    // Erase an element at a specific position
+    it = lst.begin();
+    advance(it, 1); // Move iterator to the second position
+    lst.erase(it); // Remove the second element (15)
+    cout << "List after erase: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    // Using iterator to access an element
+    it = lst.begin();
+    advance(it, 0); // Access the first element
+    cout << "Element at position 0: " << *it << endl; // Should be 10
+
+    // Swapping two lists
+    list<int> lst2 = {100, 200, 300};
+    lst.swap(lst2); // Swap lst with lst2
+    cout << "List after swap: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    // Clear the list
+    lst.clear();
+    cout << "List after clear: ";
+    for (int val : lst) cout << val << " ";
+    cout << endl;
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+// Double Ended Queue
+push_front - Add an element at the front.
+
+push_back - Add an element at the back.
+
+pop_front - Remove an element from the front.
+
+pop_back - Remove an element from the back.
+
+front - Access the front element.
+
+back - Access the back element.
+
+size - Get the number of elements.
+
+empty - Check if the deque is empty.
+
+clear - Clear the entire deque.
+
+insert - Insert at a specific position.
+
+erase - Erase from a specific position.
+
+at - Access an element at a specific index.
+
+begin and end - Iterators to the first and past-the-last elements.
+
+swap - Swap two deques.
+
+resize - Resize the deque.
+
+Here is a C++ implementation:
+
+cpp
+Copy
+#include <iostream>
+#include <deque>
+#include <list>
+
+using namespace std;
+
+int main() {
+    // Initialize a deque of integers
+    deque<int> d;
+    
+    // Border way operations on deque
+    cout << "Pushing elements to front and back:" << endl;
+    d.push_back(10);     // push 10 at the back
+    d.push_back(20);     // push 20 at the back
+    d.push_front(5);     // push 5 at the front
+    d.push_front(1);     // push 1 at the front
+    cout << "Deque after push operations: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+    
+    // Access the front and back elements
+    cout << "Front element: " << d.front() << endl; // Should be 1
+    cout << "Back element: " << d.back() << endl;   // Should be 20
+    
+    // Pop elements from front and back
+    d.pop_front();  // removes 1 from the front
+    d.pop_back();   // removes 20 from the back
+    cout << "Deque after pop operations: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    // Size of the deque
+    cout << "Deque size: " << d.size() << endl;
+
+    // Check if deque is empty
+    if (d.empty()) {
+        cout << "Deque is empty!" << endl;
+    } else {
+        cout << "Deque is not empty!" << endl;
+    }
+
+    // Insert an element at a specific position
+    d.insert(d.begin() + 1, 15); // Insert 15 at the second position
+    cout << "Deque after insert: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    // Erase an element at a specific position
+    d.erase(d.begin() + 1); // Remove the second element (15)
+    cout << "Deque after erase: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    // Access an element by index using at()
+    cout << "Element at index 0: " << d.at(0) << endl; // Should be 10
+
+    // Swapping two deques
+    deque<int> d2 = {100, 200, 300};
+    d.swap(d2); // Swap d with d2
+    cout << "Deque after swap: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    // Resize the deque
+    d.resize(5, 50); // Resize to 5 elements, filling with 50 if necessary
+    cout << "Deque after resize: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    // Clear the deque
+    d.clear();
+    cout << "Deque after clear: ";
+    for (int val : d) cout << val << " ";
+    cout << endl;
+
+    return 0;
+}
