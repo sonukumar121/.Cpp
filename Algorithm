@@ -1,3 +1,61 @@
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+|      **Aspect**        |                  **algorithm**                 |                   **other containers**           |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Purpose**            | A standard library header providing a collection| Containers such as **vector**, **set**, **map**, |
+|                       | of generic algorithms that operate on ranges,  | **deque**, **list**, etc., are used to store data |
+|                       | sequences, and containers.                     | and are typically passed to `algorithm` functions.|
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Key Functions**      | `sort()`, `reverse()`, `find()`, `binary_search()`,| Various functions for data management and access |
+|                       | `copy()`, `swap()`, `unique()`, `remove()`,     | like `push_back()`, `pop_front()`, `insert()`,    |
+|                       | `accumulate()`, `count()`, `for_each()`, and many| `erase()`, etc., which manipulate container data. |
+|                       | more.                                           |                                                  |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Time Complexity**    | Varies based on the algorithm. Some common:    | Dependent on the container's internal structure, |
+|                       | - `sort()`: O(n log n)                         | like O(1) for accessing vector elements or O(n)  |
+|                       | - `find()`: O(n)                               | for searching in a list. Container operations    |
+|                       | - `reverse()`: O(n)                            | like `push_back()` and `insert()` also vary in    |
+|                       | - `accumulate()`: O(n)                         | complexity depending on the container.            |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Function Type**      | **Generic** algorithms that work with iterators,| **Container-specific** methods that are used to   |
+|                       | making them flexible to work with any container. | manipulate and access data stored in containers.  |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Use Case**           | Used to perform operations on data within      | Containers store and manage the data while        |
+|                       | containers, especially when needing functions   | algorithms operate on these containers to modify  |
+|                       | that work across a range of elements.           | or query the data.                               |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Sorting**            | `sort()`, `partial_sort()`, `stable_sort()`,    | Sorting algorithms can be applied to **vector**,  |
+|                       | `nth_element()`                                 | **deque**, and other containers, but `set` and    |
+|                       | (most efficient)                               | `map` are always sorted by default.              |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Searching**          | `find()`, `binary_search()`, `lower_bound()`,   | Containers like **vector** and **list** are used  |
+|                       | `upper_bound()`                                 | in conjunction with search algorithms such as     |
+|                       | (searches within a range or container)          | `find()` and `binary_search()` (especially in     |
+|                       |                                               | sorted containers).                               |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Manipulation**       | `reverse()`, `rotate()`, `swap()`, `copy()`,    | Containers have methods like `push_back()`,       |
+|                       | `move()`, `fill()`, `unique()`, etc.            | `insert()`, and `erase()` to manipulate elements. |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Predicate Functions**| `any_of()`, `all_of()`, `none_of()`, `count_if()`,| Containers may use predicates within algorithm   |
+|                       | `for_each()`                                   | functions like `find()` or `remove()`.            |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+| **Key Methods**        | `sort()`, `reverse()`, `find()`, `count()`,     | Containers: `push_back()`, `insert()`, `erase()`, |
+|                       | `unique()`, `remove()`, `copy()`, `accumulate()`,| `clear()`, `size()`, `begin()`, `end()`, etc.     |
+|                       | `for_each()`, `all_of()`, `any_of()`, etc.      |                                                  |
++-----------------------+-----------------------------------------------+--------------------------------------------------+
+
+algorithm: A header that provides generic algorithms for common tasks like searching, sorting, modifying, and querying containers.
+
+Containers: Data structures like vector, deque, set, map, etc., that store data and provide container-specific methods.
+
+
+
+
+
+
+
+
+
+
 #include<iostream>
 #include<vector>
 #include<map>
