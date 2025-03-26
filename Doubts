@@ -46,3 +46,19 @@ for (auto it = v.begin(); it != v.end(); ++it) {
     std::cout << it->first << ": " << it->second << std::endl;
 }
 
+
+
+Container Type	Loop Type	Explanation
+std::vector	Simple for loop (index-based)	Supports random access by index, so you can use simple for loops.
+
+std::deque	Simple for loop (index-based)	Supports random access by index, so you can use simple for loops.
+
+std::list	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Does not support random access; use iterators.
+
+std::set	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Does not support random access; use iterators.
+
+std::map	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Does not support random access; use iterators.
+
+std::unordered_map	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Does not support random access; use iterators.
+
+Any container	Range-based for loop (for (auto& elem : v))	Works with any container; simpler and cleaner syntax.
