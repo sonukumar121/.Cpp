@@ -59,3 +59,46 @@ output:)
 5 3 2 1 4 -->any random order can  be print by compiler.
 
 
+
++---------------------+-----------------------------------------------+--------------------------------------------------+
+|      **Aspect**      |                    **set**                    |                  **unordered_set**               |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Implementation**   | Typically implemented as a **balanced binary** | Implemented as a **hash table** (unordered),     |
+|                     | tree (e.g., Red-Black Tree).                    | elements are not stored in any specific order.   |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Ordering**         | **Ordered**: Elements are sorted according to  | **Unordered**: No specific order, elements are   |
+|                     | the comparison function (by default, `<`).      | hashed into buckets.                            |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Time Complexity**  | O(log n) for most operations (insertion,       | O(1) average case for most operations (insert,   |
+|                     | deletion, and search) due to the balanced tree | search, and delete), but can degrade to O(n) in  |
+|                     | structure.                                      | the worst case.                                  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Memory Usage**     | More memory overhead due to tree nodes and     | Less memory overhead compared to `set` due to    |
+|                     | pointers (for each element and its left/right  | the hash table's compact design but might have   |
+|                     | children).                                      | some extra space for collision handling.         |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Duplicates**       | Does not allow duplicate elements; each element| Does not allow duplicate elements; each element  |
+|                     | must be unique.                                 | must be unique.                                  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Insert/Search/Delete**| O(log n) for insertion, deletion, and search | O(1) on average for insertion, deletion, and     |
+|                     | operations due to the balanced binary tree.     | search operations, though may degrade in worst   |
+|                     |                                               | case due to hash collisions.                    |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Iteration**        | **Ordered** iteration: Elements are iterated    | **Unordered** iteration: Elements are iterated   |
+|                     | in the order they are sorted.                  | in an arbitrary order (based on hash buckets).   |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Use Case**         | Best when you need **sorted** elements and     | Best when you need **fast** insertions, deletions,|
+|                     | efficient search and range queries.             | and lookups without requiring sorting.           |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Key Methods**      | `insert()`, `erase()`, `find()`, `count()`,    | `insert()`, `erase()`, `find()`, `count()`,      |
+|                     | `lower_bound()`, `upper_bound()`, `size()`,    | `size()`, `begin()`, `end()`, `bucket_count()`,  |
+|                     | `clear()`, `empty()`.                          | `rehash()` etc.                                  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+
+
+set: A sorted collection of unique elements, implemented as a balanced binary tree (e.g., Red-Black Tree), providing logarithmic time complexity for most operations.
+
+unordered_set: An unordered collection of unique elements, implemented using a hash table, offering constant time (on average) for insertion, deletion, and search operations.
+
+
+
