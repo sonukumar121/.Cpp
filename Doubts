@@ -1,2 +1,21 @@
    v.erase(remove(v.begin(), v.end(), 0), v.end());
    remove is used for list elements not vector..
+
+for(int value : container)
+
+Summary:
+You can use the range-based for loop for:
+
+vector
+
+set
+
+list
+
+deque
+
+But you cannot use it directly for:
+
+stack
+
+queue
