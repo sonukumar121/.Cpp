@@ -1,3 +1,42 @@
++---------------------+-----------------------------------------------+--------------------------------------------------+
+|      **Aspect**      |                   **vector**                  |                   **deque**                     |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Implementation**   | Dynamic array that stores elements in contiguous | Dynamic array of blocks, allowing fast insertion |
+|                     | memory locations.                              | and deletion at both ends.                      |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Access Time**      | O(1) for accessing elements by index.         | O(1) for accessing elements at both ends.       |
+|                     |                                               | O(n) for accessing elements in the middle.      |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Insert/Erase**     | O(n) for inserting/removing elements at the    | O(1) for insertion/removal at both ends.        |
+|                     | beginning or middle (due to shifting).         | O(n) for insertion/removal at random positions. |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Memory Usage**     | Contiguous memory block. May reallocate memory | Allocates memory in chunks (blocks). Can have    |
+|                     | when resizing.                                 | extra memory overhead for managing blocks.      |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Size/Capacity**    | Dynamic resizing, but can waste memory if the  | Grows dynamically by allocating in blocks.      |
+|                     | size increases or decreases frequently.       | Usually more efficient with memory management.   |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Use Case**         | Ideal for situations where elements need to   | Ideal for when you need efficient insertion and |
+|                     | be accessed by index or when inserting/removing| removal at both ends (like in queues).           |
+|                     | elements mostly at the end.                   |                                                  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Iteration**        | Efficient iteration through contiguous memory  | Iteration may be slightly slower than `vector`   |
+|                     | locations.                                     | due to block-based allocation.                  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Key Methods**      | `push_back()`, `pop_back()`, `insert()`, `erase()`,| `push_back()`, `push_front()`, `pop_back()`,     |
+|                     | `at()`, `front()`, `back()`, `size()`, `clear()`,| `pop_front()`, `insert()`, `erase()`, `size()`,  |
+|                     | `empty()`, `resize()`, `shrink_to_fit()`.      | `resize()`, `clear()`, `empty()`.               |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+
+vector: A dynamic array providing fast random access by index and efficient insertion/removal at the end. However, operations like insertions or deletions at the beginning or middle can be slow due to the need to shift elements.
+
+deque: A double-ended queue that allows efficient insertion and removal from both ends but might have more memory overhead due to its block-based allocation.
+
+
+
+
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
