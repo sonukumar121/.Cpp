@@ -62,3 +62,5 @@ std::map	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Do
 std::unordered_map	Iterator-based loop (for (auto it = v.begin(); it != v.end(); ++it))	Does not support random access; use iterators.
 
 Any container	Range-based for loop (for (auto& elem : v))	Works with any container; simpler and cleaner syntax.
+
+//advance,for(int val:container) ,for(auto it) for all expect stack and queue.
