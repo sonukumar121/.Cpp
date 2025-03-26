@@ -139,7 +139,56 @@ The parameters (e.g., int& num) specify the input to the lambda.
 
 The body of the lambda defines what happens with those parameters (for instance, modifying them or printing them).
 
+//1>--------------------------------------------------------------------------------------
+Efficiently rotates a sequence to the left.
 
+Use Case: Left-rotate an array without copying.
+cpp
+Copy
+Edit
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> data = {1, 2, 3, 4, 5};
+
+    std::rotate(data.begin(), data.begin() + 2, data.end());
+
+    std::cout << "Rotated array: ";
+    for (int n : data) std::cout << n << " ";
+
+    return 0;
+}
+Output:
+3 4 5 1 2
+
+
+
+
+//2>-----------------------------------------------------------------------------------------------
+Finds the first occurrence of two consecutive equal elements.
+
+Use Case: Detect duplicates in sorted data.
+cpp
+Copy
+Edit
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> data = {1, 2, 2, 3, 4, 5};
+
+    auto it = std::adjacent_find(data.begin(), data.end());
+    if (it != data.end()) {
+        std::cout << "First duplicate: " << *it << std::endl;
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------------------------------------------------
 
 
 
