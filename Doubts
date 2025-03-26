@@ -2,20 +2,47 @@
    remove is used for list elements not vector..
 
 for(int value : container)
-
 Summary:
 You can use the range-based for loop for:
-
 vector
-
 set
-
 list
-
 deque
-
+//
 But you cannot use it directly for:
-
 stack
-
 queue
+
+//(v.begin(),v.end());
+1>std::vector<int> v = {1, 2, 3, 4};
+std::sort(v.begin(), v.end());
+
+
+
+2>std::list<int> v = {1, 2, 3, 4};
+v.sort();
+
+
+
+3>std::set<int> v = {1, 2, 3, 4};
+for (auto it = v.begin(); it != v.end(); ++it) {
+    std::cout << *it << " ";
+}
+
+
+
+4>std::deque<int> v = {1, 2, 3, 4};
+std::sort(v.begin(), v.end());
+
+
+
+5>std::pair<int, int> p = {1, 2};
+std::cout << p.first << " " << p.second << std::endl;
+
+
+
+6>std::map<int, std::string> v = {{1, "one"}, {2, "two"}, {3, "three"}};
+for (auto it = v.begin(); it != v.end(); ++it) {
+    std::cout << it->first << ": " << it->second << std::endl;
+}
+
