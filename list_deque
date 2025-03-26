@@ -1,1 +1,28 @@
+list-->doubly linked list
+deque->double ended queue
 
+
+ **Aspect**     |                  **List**                  |                    **Deque**                  |
++-------------------+--------------------------------------------+-----------------------------------------------+
+| **Implementation** | Dynamic Array (contiguous memory)          | Doubly Linked List (nodes with pointers)      |
++-------------------+--------------------------------------------+-----------------------------------------------+
+| **Time Complexity**|                                            |                                               |
+| - Append (end)     | O(1)                                       | O(1)                                          |
+| - Prepend (begin)  | O(n) (due to shifting elements)            | O(1)                                          |
+| - Access by Index  | O(1)                                       | O(n)                                          |
+| - Pop (end)        | O(1)                                       | O(1)                                          |
+| - Pop (begin)      | O(n) (due to shifting elements)            | O(1)                                          |
++-------------------+--------------------------------------------+-----------------------------------------------+
+| **Use Case**       | Fast random access, appending/removing     | Efficient appending/removing at both ends     |
+|                   | elements at the end, simple operations     | (ideal for queues, sliding windows, etc.)     |
++-------------------+--------------------------------------------+-----------------------------------------------+
+| **Memory Usage**   | May waste memory due to resizing strategy  | Generally uses more memory due to overhead    |
+|                   | of dynamic arrays                          | of doubly linked list nodes                   |
++-------------------+--------------------------------------------+-----------------------------------------------+
+| **Key Methods**    | `append()`, `pop()`, `insert()`, `remove()`| `append()`, `appendleft()`, `pop()`, `popleft()` |
+|                   |                                            | `extend()`, `extendleft()`                    |
++-------------------+--------------------------------------------+-----------------------------------------------+
+
+List is best for random access and appending/removing from the end.
+
+Deque is best for scenarios where you need fast operations at both ends of the collection (like queues).
