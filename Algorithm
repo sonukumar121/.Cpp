@@ -48,7 +48,84 @@ algorithm: A header that provides generic algorithms for common tasks like searc
 Containers: Data structures like vector, deque, set, map, etc., that store data and provide container-specific methods.
 
 
++-------------------+---------------------------------------------------------------+
+|    **Keyword**     |                       **All Examples Combined**             |
++-------------------+---------------------------------------------------------------+
+| **Description**    | Demonstrating common C++ algorithms like sorting, reversing, |
+|                   | searching, accumulating, copying, and removing duplicates.   |
++-------------------+---------------------------------------------------------------+
+| **Example**        | #include <iostream>                                           |
+|                   | #include <algorithm>                                          |
+|                   | #include <numeric>                                            |
+|                   | #include <vector>                                             |
+|                   |                                                              |
+|                   | int main() {                                                  |
+|                   |     // Sample vector with some duplicate values              |
+|                   |     std::vector<int> v = {1, 3, 2, 5, 3, 4, 1};              |
+|                   |                                                              |
+|                   |     // 1. Sort the vector in ascending order                 |
+|                   |     std::sort(v.begin(), v.end());                            |
+|                   |     std::cout << "Sorted: ";                                  |
+|                   |     for (int n : v) {                                         |
+|                   |         std::cout << n << " ";                                |
+|                   |     }                                                         |
+|                   |     std::cout << std::endl;                                   |
+|                   |                                                              |
+|                   |     // 2. Reverse the vector                                  |
+|                   |     std::reverse(v.begin(), v.end());                         |
+|                   |     std::cout << "Reversed: ";                                |
+|                   |     for (int n : v) {                                         |
+|                   |         std::cout << n << " ";                                |
+|                   |     }                                                         |
+|                   |     std::cout << std::endl;                                   |
+|                   |                                                              |
+|                   |     // 3. Find a value in the vector                          |
+|                   |     auto it = std::find(v.begin(), v.end(), 3);               |
+|                   |     if (it != v.end()) {                                      |
+|                   |         std::cout << "Found 3: " << *it << std::endl;         |
+|                   |     }                                                         |
+|                   |                                                              |
+|                   |     // 4. Accumulate the sum of elements                      |
+|                   |     int sum = std::accumulate(v.begin(), v.end(), 0);         |
+|                   |     std::cout << "Sum: " << sum << std::endl;                 |
+|                   |                                                              |
+|                   |     // 5. Copy the vector to a new vector                      |
+|                   |     std::vector<int> v_copy(v.size());                        |
+|                   |     std::copy(v.begin(), v.end(), v_copy.begin());            |
+|                   |     std::cout << "Copied: ";                                  |
+|                   |     for (int n : v_copy) {                                    |
+|                   |         std::cout << n << " ";                                |
+|                   |     }                                                         |
+|                   |     std::cout << std::endl;                                   |
+|                   |                                                              |
+|                   |     // 6. Remove consecutive duplicates                       |
+|                   |     auto last = std::unique(v.begin(), v.end());              |
+|                   |     v.erase(last, v.end());                                   |
+|                   |     std::cout << "Unique: ";                                  |
+|                   |     for (int n : v) {                                         |
+|                   |         std::cout << n << " ";                                |
+|                   |     }                                                         |
+|                   |     std::cout << std::endl;                                   |
+|                   |     return 0;                                                 |
+|                   | }                                                             |
+| **Output**         | Sorted: 1 1 2 3 3 4 5                                        |
+|                   | Reversed: 5 4 3 3 2 1 1                                      |
+|                   | Found 3: 3                                                    |
+|                   | Sum: 18                                                       |
+|                   | Copied: 5 4 3 3 2 1 1                                        |
+|                   | Unique: 5 4 3 2 1                                            |
++-------------------+---------------------------------------------------------------+
+sort(): Sorts the vector in ascending order.
 
+reverse(): Reverses the order of elements in the vector.
+
+find(): Searches for the first occurrence of the value 3 and prints it.
+
+accumulate(): Computes the sum of the vector elements.
+
+copy(): Copies the sorted/reversed vector to a new vector and prints it.
+
+unique(): Removes consecutive duplicates and then prints the unique elements.
 
 
 
