@@ -64,3 +64,23 @@ std::unordered_map	Iterator-based loop (for (auto it = v.begin(); it != v.end();
 Any container	Range-based for loop (for (auto& elem : v))	Works with any container; simpler and cleaner syntax.
 
 //advance,for(int val:container) ,for(auto it) for all expect stack and queue.
+
+
+//advanced algorithm for_each ..
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    std::for_each(vec.begin(), vec.end(), [](int& num) {
+        num *= 2;  // Multiply each element by 2
+    });
+
+    for (auto val : vec) {
+        std::cout << val << " ";  // Output: 2 4 6 8 10
+    }
+
+    return 0;
+}
