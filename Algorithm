@@ -143,9 +143,7 @@ The body of the lambda defines what happens with those parameters (for instance,
 Efficiently rotates a sequence to the left.
 
 Use Case: Left-rotate an array without copying.
-cpp
-Copy
-Edit
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -170,9 +168,7 @@ Output:
 Finds the first occurrence of two consecutive equal elements.
 
 Use Case: Detect duplicates in sorted data.
-cpp
-Copy
-Edit
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -189,9 +185,167 @@ int main() {
 }
 
 ----------------------------------------------------------------------------------------------------
+3>1. __lg(n) – Faster Log Base 2
+Instead of using log2(n), GCC provides __lg(n), which is faster:
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n = 16;
+    cout << "__lg(n): " << __lg(n) << endl;  // Output: 4 (since 2^4 = 16)
+}
 
 
 
+
+4>2. std::set Ordered Position Lookup (O(log N))
+Most people iterate through std::set, but you can directly find an index:
+
+cpp
+Copy
+Edit
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    set<int> s = {10, 20, 30, 40};
+    auto it = s.find(30);
+    cout << "Index of 30: " << distance(s.begin(), it) << endl; // Output: 2
+}
+
+5>3. std::partition – Fast Split (O(N))
+Partition elements in one pass without sorting:
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 9, 2, 8, 3, 7, 4};
+    partition(v.begin(), v.end(), [](int x) { return x % 2 == 0; });
+
+    for (int x : v) cout << x << " "; // Even numbers first
+}
+
+6>4. std::nth_element – Find K-th Smallest in O(N)
+Instead of sorting everything, find the K-th smallest in linear time:
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {7, 10, 4, 3, 20, 15};
+    nth_element(v.begin(), v.begin() + 2, v.end());
+    
+    cout << "3rd smallest element: " << v[2] << endl; // Output: 7
+}
+
+
+7>5. std::iota – Quick Number Generation
+Instead of manually filling an array with numbers:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v(10);
+    iota(v.begin(), v.end(), 1);
+    
+    for (int x : v) cout << x << " "; // Output: 1 2 3 4 5 6 7 8 9 10
+}
+
+8>6. std::rotate – Fast Circular Shift
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4, 5};
+    rotate(v.begin(), v.begin() + 2, v.end());
+    
+    for (int x : v) cout << x << " "; // Output: 3 4 5 1 2
+}
+
+9>8. std::minmax_element – Find Min & Max in O(N)
+Instead of separate min/max calls:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {3, 1, 4, 1, 5, 9};
+    auto [minIt, maxIt] = minmax_element(v.begin(), v.end());
+
+    cout << "Min: " << *minIt << ", Max: " << *maxIt << endl;
+}
+
+10>9. std::transform – Apply Function on Elements
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> v = {1, 2, 3, 4};
+    transform(v.begin(), v.end(), v.begin(), [](int x) { return x * x; });
+
+    for (int x : v) cout << x << " "; // Output: 1 4 9 16
+}
+
+11>1. std::inner_product – Fast Dot Product (O(N))
+Instead of writing a loop for dot product:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> a = {1, 2, 3};
+    vector<int> b = {4, 5, 6};
+
+    int dot_product = inner_product(a.begin(), a.end(), b.begin(), 0);
+    cout << "Dot Product: " << dot_product << endl;  // Output: 32
+}
+
+
+12>3. std::next_permutation – Generate All Permutations
+Instead of writing recursion:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s = "abc";
+    do {
+        cout << s << endl;
+    } while (next_permutation(s.begin(), s.end()));
+}
+
+
+
+13>5. std::gcd and std::lcm – Built-in GCD/LCM
+Instead of writing your own:
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cout << "GCD: " << gcd(36, 60) << endl;   // Output: 12
+    cout << "LCM: " << lcm(36, 60) << endl;   // Output: 180
+}
+
+
+14>7. std::bitset – Super Fast Bit Manipulation
+Instead of using vector<bool>:
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    bitset<8> b(42); // 42 = 00101010 in binary
+    cout << b.count() << endl;  // Output: 3 (number of 1s)
+}
+
+-------------------------------------------------------------------------------------------------------------------
 #include<iostream>
 #include<vector>
 #include<map>
