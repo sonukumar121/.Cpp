@@ -2,27 +2,36 @@ list-->doubly linked list
 deque->double ended queue
 
 
- **Aspect**     |                  **List**                  |                    **Deque**                  |
-+-------------------+--------------------------------------------+-----------------------------------------------+
-| **Implementation** | Dynamic Array (contiguous memory)          | Doubly Linked List (nodes with pointers)      |
-+-------------------+--------------------------------------------+-----------------------------------------------+
-| **Time Complexity**|                                            |                                               |
-| - Append (end)     | O(1)                                       | O(1)                                          |
-| - Prepend (begin)  | O(n) (due to shifting elements)            | O(1)                                          |
-| - Access by Index  | O(1)                                       | O(n)                                          |
-| - Pop (end)        | O(1)                                       | O(1)                                          |
-| - Pop (begin)      | O(n) (due to shifting elements)            | O(1)                                          |
-+-------------------+--------------------------------------------+-----------------------------------------------+
-| **Use Case**       | Fast random access, appending/removing     | Efficient appending/removing at both ends     |
-|                   | elements at the end, simple operations     | (ideal for queues, sliding windows, etc.)     |
-+-------------------+--------------------------------------------+-----------------------------------------------+
-| **Memory Usage**   | May waste memory due to resizing strategy  | Generally uses more memory due to overhead    |
-|                   | of dynamic arrays                          | of doubly linked list nodes                   |
-+-------------------+--------------------------------------------+-----------------------------------------------+
-| **Key Methods**    | `append()`, `pop()`, `insert()`, `remove()`| `append()`, `appendleft()`, `pop()`, `popleft()` |
-|                   |                                            | `extend()`, `extendleft()`                    |
-+-------------------+--------------------------------------------+-----------------------------------------------+
++---------------------+-----------------------------------------------+--------------------------------------------------+
+|      **Aspect**      |                   **list**                    |                    **deque**                    |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Implementation**   | Doubly linked list (elements stored in nodes) | Dynamic array of blocks, allowing fast insertions |
+|                     |                                               | and deletions at both ends.                     |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Access Time**      | O(n) for accessing elements by index          | O(1) for accessing elements at both ends        |
+|                     |                                               | O(n) for accessing elements in the middle       |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Insert/Erase**     | O(1) for insertion/removal at both ends or at  | O(1) for insertion/removal at both ends         |
+|                     | known positions (if iterator is available)     | O(n) for insertion/removal at random positions  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Memory Usage**     | More overhead due to the doubly linked list    | Less overhead for contiguous memory blocks, but  |
+|                     | (pointers for previous and next elements)      | can have extra memory for managing blocks       |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Size/Capacity**    | Size is dynamic, but memory is allocated       | Can grow dynamically; usually allocated in       |
+|                     | as the list grows. No concept of capacity.     | chunks with a bit of overhead to handle growth.  |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Use Case**         | Efficient for inserting/removing from both ends| Efficient for inserting/removing from both ends  |
+|                     | or when needing a linked structure where       | and for situations requiring fast access to     |
+|                     | traversal or modification is required.         | both the front and the back.                    |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Iteration**        | Slower iteration compared to deque as it requires| Faster iteration from front to back compared to |
+|                     | traversing linked list nodes one by one.       | linked list since it uses contiguous memory.     |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+| **Key Methods**      | `push_front()`, `push_back()`, `pop_front()`,   | `push_front()`, `push_back()`, `pop_front()`,     |
+|                     | `pop_back()`, `insert()`, `erase()`, `size()`   | `pop_back()`, `insert()`, `erase()`, `size()`,   |
+|                     |                                               | `resize()`, `front()`, `back()`, etc.            |
++---------------------+-----------------------------------------------+--------------------------------------------------+
+Summary:
+list: A doubly linked list suited for frequent insertions and deletions, especially where you don't need fast random access.
 
-List is best for random access and appending/removing from the end.
-
-Deque is best for scenarios where you need fast operations at both ends of the collection (like queues).
+deque: A double-ended queue that allows fast access to both ends and efficient insertions/removals, making it ideal when you need quick access and modifications to both ends.
