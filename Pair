@@ -1,0 +1,76 @@
++---------------------+-----------------------------------------------+
+|      **Aspect**      |                   **pair**                   |
++---------------------+-----------------------------------------------+
+| **Data Structure**   | A container that holds exactly two elements,  |
+|                     | which can be of different types.              |
++---------------------+-----------------------------------------------+
+| **Memory Layout**    | Stores two values in a single unit (pair).    |
+|                     | The elements are typically stored contiguously.|
++---------------------+-----------------------------------------------+
+| **Access Time**      | O(1) for accessing both elements (using `first` and `second`). |
++---------------------+-----------------------------------------------+
+| **Insertion/Deletion**| Since a `pair` is a simple structure, no insertion or deletion methods exist. |
+|                     | Pairs are typically constructed or copied.     |
++---------------------+-----------------------------------------------+
+| **Iteration**        | Cannot be iterated over as it is a single entity. |
+|                     | However, it can be used in conjunction with containers such as `map` or `vector` that hold pairs. |
++---------------------+-----------------------------------------------+
+| **Use Case**         | Used to store two related values of potentially different types. Commonly used in **maps**, **sets**, or as return types for functions. |
++---------------------+-----------------------------------------------+
+| **Size/Capacity**    | Fixed size (2 elements).                     |
+|                     | Typically smaller in memory usage.            |
++---------------------+-----------------------------------------------+
+| **Key Methods**      | `first` (access first element), `second` (access second element), `make_pair()` (function to create a pair). |
++---------------------+-----------------------------------------------+
+
+
++-------------------+---------------------------------------------------------------+
+|    **Keyword**     |                          **pair**                           |
++-------------------+---------------------------------------------------------------+
+| **Description**    | A `pair` is a simple container that holds two related values,  |
+|                   | which can be of different types. It is often used to store     |
+|                   | two pieces of information together.                           |
++-------------------+---------------------------------------------------------------+
+| **Example**        | #include <iostream>                                           |
+|                   | #include <utility>                                            |
+|                   |                                                              |
+|                   | int main() {                                                  |
+|                   |     // Creating a pair with an int and a string               |
+|                   |     std::pair<int, std::string> p1(1, "One");                 |
+|                   |                                                              |
+|                   |     // Accessing the elements of the pair using .first and .second|
+|                   |     std::cout << "First: " << p1.first << ", Second: " << p1.second << std::endl; |
+|                   |                                                              |
+|                   |     // Modifying the pair elements                           |
+|                   |     p1.first = 2;                                             |
+|                   |     p1.second = "Two";                                        |
+|                   |     std::cout << "Modified First: " << p1.first << ", Modified Second: " << p1.second << std::endl; |
+|                   |                                                              |
+|                   |     // Creating another pair using make_pair                 |
+|                   |     std::pair<double, char> p2 = std::make_pair(3.14, 'A');   |
+|                   |     std::cout << "Second pair - First: " << p2.first << ", Second: " << p2.second << std::endl; |
+|                   |                                                              |
+|                   |     return 0;                                                 |
+|                   | }                                                             |
+| **Output**         | First: 1, Second: One                                        |
+|                   | Modified First: 2, Modified Second: Two                       |
+|                   | Second pair - First: 3.14, Second: A                          |
++-------------------+---------------------------------------------------------------+
+
+
+Creating a pair: Using the std::pair constructor to create a pair of an int and a string.
+
+Accessing pair elements: Accessing the first and second members of the pair.
+
+Modifying the pair: Changing the values of first and second in the pair.
+
+Using make_pair(): Creating a pair using the make_pair() function for a double and a char.
+
+Key Methods for pair:
+first: Accesses the first element of the pair.
+
+second: Accesses the second element of the pair.
+
+make_pair(): A helper function that constructs a pair with two values.
+
+The pair is extremely useful when you want to group two related pieces of data together.
