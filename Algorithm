@@ -323,6 +323,24 @@ int main() {
 
 
 
+
+#include <algorithm>
+#include <vector>
+#include <iostream>
+
+int main() {
+    std::vector<int> v = {3, 2, 1};
+
+    do {
+        for (int x : v) std::cout << x << ' ';
+        std::cout << '\n';
+    } while (std::prev_permutation(v.begin(), v.end()));
+
+    return 0;
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
 13>5. std::gcd and std::lcm – Built-in GCD/LCM
 Instead of writing your own:
 #include <bits/stdc++.h>
