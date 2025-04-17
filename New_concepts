@@ -1,0 +1,25 @@
+when you convert string into input string from a keyboard to read word by word 
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+int main() 
+{   int p=0,c=0,i;
+    std::string s = "luffy is still joyboy";
+    std::istringstream iss(s); ----------------->then use this stl fn.
+    for(i=s.size()-1;i>=0;i--)
+    {
+       if(s[i]==' ' && p==1)
+       {
+          break;
+       }
+       if(s[i]!=' ')
+       {
+        c=c+1;
+         p=1;
+       }
+    }
+    cout<<c;
+    return 0;
+}----------------------------------------------------------------------------------
