@@ -39,3 +39,26 @@ DIFFERENT=1
                                  1 & 0 =1
                                  1 & 1 =0
 --------------------------------------------------------------------------------
+
+// best for to fing power of 2 // odd or even
+4>bitwise-shifting-operator
+bitwise <<  ---> [ans=a*2^b (always)].
+
+n= 1 0 0
+n<<1
+1 0 0 0 ==8
+- - - - 
+
+similarly for :-)
+10<<2
+1 0 1 0
+1 0 1 0 0 0 ==40
+        - -
+jitna se sift bola ho utna right side 0 badha do ...
+
+----------------------------------------------------------------------------------
+
+5> bitwise >>
+isme right side shift nhi hota mtlb jitna se shift karna ho utna right ke elements delete kro and then jitne elements delete kare utne hi left side 0 laga doo..
+a>>b
+ans=[a/2^b] always.
