@@ -393,3 +393,24 @@ output:-)
  4,0
 
 simpilary swap(2,3);-->output=3,2;
+------------------------------------------------------------------------------------------------------------------
+
+//Find value in vectors
+
+#include <iostream>
+#include <vector>
+#include <algorithm> // for std::find
+
+int main() {
+    std::vector<int> vec = {10, 20, 30, 40, 50};
+    int target = 30;
+
+    auto it = std::find(vec.begin(), vec.end(), target);
+    if (it != vec.end()) {
+        std::cout << "Found at index: " << (it - vec.begin()) << "\n";
+    } else {
+        std::cout << "Not found\n";
+    }
+
+    return 0;
+}
