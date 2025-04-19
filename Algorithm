@@ -414,3 +414,15 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+🔄 Comparison:
+
+Goal	Use
+Move iterator by N positions	std::advance(it, N);
+Get index/position of iterator	it - v.begin()
