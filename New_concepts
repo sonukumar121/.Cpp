@@ -23,3 +23,21 @@ int main()
     cout<<c;
     return 0;
 }----------------------------------------------------------------------------------
+
+
+🧠 So what happens?
+If you do:
+
+cpp
+Copy
+Edit
+cout << "Enter a value:";
+Nothing forces that message to immediately appear on the screen. It might just sit in the buffer until:
+
+You add a newline (\n)
+
+Or use endl (which adds a newline and flushes)
+
+Or the buffer fills up
+
+Or the program ends
