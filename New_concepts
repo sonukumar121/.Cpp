@@ -41,3 +41,12 @@ Or use endl (which adds a newline and flushes)
 Or the buffer fills up
 
 Or the program ends
+-----------------------------------------------------------------------------------
+
+
+.//MATHS 
+Function | Description
+pow(x, y) | xyx^yxy
+sqrt(x) | Square root
+cbrt(x) | Cube root
+hypot(x, y) | x2+y2\sqrt{x^2 + y^2}x2+y2​
