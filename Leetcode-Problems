@@ -1,0 +1,36 @@
+My own logic
+
+TO CHECK WHEATHER NUMBER IS PALINDROME OR NOT.
+int main()
+{
+    // // check palindrome or not
+    // string s;
+    // cout<<"Enter the strings to check palindrome or not";
+    // cin>>s;
+    // int l,r;
+    // l=0,r=s.size()-1;
+    // // cout<<l<<r;
+    
+  
+    // while(l<r)
+    // {
+    //     if(s[l]==s[r]) 
+    //     {
+    //         l++;
+    //         r--;
+    //     }
+    //     else 
+    //     {
+    //        cout<<" Not a palindrome number";
+    //        exit(1);
+    //     }
+        
+        
+    // }
+    // cout<<" palindrome Number";
+    
+    // return 0;
+ 
+    
+    
+}
