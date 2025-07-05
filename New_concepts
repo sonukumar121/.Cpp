@@ -50,3 +50,94 @@ pow(x, y) | xyx^yxy
 sqrt(x) | Square root
 cbrt(x) | Cube root
 hypot(x, y) | x2+y2\sqrt{x^2 + y^2}x2+y2​
+
+
+//TO CHECK WHEATHER CHARACTER IS A TO Z and a to z  AND 0-9 OR NOT .
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
+
+int main()
+{
+    // check palindrome or not
+    string s;
+    cout<<"Enter the strings to check palindrome or not= ";
+    getline(cin,s);
+    cout<<s;
+    int l,r;
+    l=0,r=s.size()-1;
+    // cout<<s;
+    // cout<<l<<r;
+    for (int i = 0; i < s.size(); i++)
+     {
+    s[i] = tolower(s[i]);
+     }
+    //   
+
+    
+    while(l<r)
+    {
+       
+        if(!isalnum(s[l]))
+        {
+            l++;
+        }
+
+        else if(!isalnum(s[r]))
+        {
+            r--;
+        }
+       else if(s[l]==s[r] ) 
+        {
+            l++;
+            r--;
+        }
+        
+        else if(s[l]==' ')
+        {
+           l++;     
+        } 
+
+         else if(s[r]==' ')
+        {
+           r--;     
+        } 
+
+        else 
+        {
+           cout<<" Not a palindrome number";
+           exit(1);
+        }
+        
+        
+    }
+    cout<<" palindrome Number";
+    
+    return 0;
+ 
+    
+    
+}
+
+//CONVERT STRING INTO LOWER 
+
+1>METHOD
+   string s = "A man, a plan, a canal: Panama";
+    
+    // sabko lowercase karo
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+
+
+
+
+2>METHOD
+
+  for (int i = 0; i < s.size(); i++)
+{
+    s[i] = tolower(s[i]);
+}
+//transform(start, end, destination, function);
+
+
