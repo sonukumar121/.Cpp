@@ -141,3 +141,96 @@ int main()
 //transform(start, end, destination, function);
 
 
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+//✅ Option 1: getline() with istringstream (runtime ya already given string se line lena)
+cpp
+Copy
+Edit
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+int main() {
+    string input = "Sonu Kumar loves coding";
+    istringstream iss(input);  // input ko stream bana diya
+    string line;
+    getline(iss, line);        // cin ki jagah iss
+    cout << "Line: " << line << endl;
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+class Solution {
+public:
+    bool isPalindrome(string s) 
+    {
+
+    istringstream iss(s);  // input ko stream bana diya
+    string str;
+    getline(iss, str);        // cin ki jagah iss
+    int l,r;
+    l=0,r=str.size()-1;
+    // cout<<s;
+    // cout<<l<<r;
+    for (int i = 0; i < str.size(); i++)
+     {
+    str[i] = tolower(str[i]);
+     }
+    //   
+
+    
+    while(l<r)
+    {
+       
+        if(!isalnum(str[l]))
+        {
+            l++;
+        }
+
+        else if(!isalnum(str[r]))
+        {
+            r--;
+        }
+       else if(str[l]==str[r] ) 
+        {
+            l++;
+            r--;
+        }
+        
+        else if(str[l]==' ')
+        {
+           l++;     
+        } 
+
+         else if(str[r]==' ')
+        {
+           r--;     
+        } 
+
+        else 
+        {
+           return false;
+        }
+        
+        
+    }
+    return true;
+    
+  
+    }
+
+    
+ 
+    
+    
+
+
+
+      
+    
+};
