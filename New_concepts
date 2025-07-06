@@ -1,3 +1,31 @@
+//INT_MAX and INT_MIN -->keyword to check range of integer that out of bounds or not best method to handle .
+//REVERSE INTERGER -->123==>321
+class Solution {
+public:
+    int reverse(int n) {
+        int l, r, rev = 0;
+        int val = n;
+       
+            while (n != 0) {
+
+                r = n % 10;
+                if (rev > INT_MAX / 10 ||  rev < INT_MIN/10) 
+                {
+                    cout << "Overflow!";
+                    return 0;
+                }
+
+                rev = rev * 10 + r;
+                n = n / 10;
+            }
+            return rev;
+        }
+      
+    };
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
 when you convert string into input string from a keyboard to read word by word 
 #include <iostream>
 #include <sstream>
